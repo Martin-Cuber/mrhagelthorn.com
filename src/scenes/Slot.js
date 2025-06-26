@@ -31,7 +31,9 @@ export class Slot
         } else if (this.symbol == "N") {
             this.pipe = new Pipe(scene,x,y+this.y_offset, 'standard', this.scaling_factor, 'not' ,this);
             this.gate = new Gate(scene,x,y+this.y_offset,'not', this.scaling_factor, 'not');
-        }
+        } else if (this.symbol == "X" {
+            this.pipe = new Pipe(scene,x,y+this.y_offset, 'curved', this.scaling_factor, 'xor',this);
+            this.gate = new Gate(scene,x,y+this.y_offset, 'xor', this.scaling_factor, 'xor')';
         if (this.pipe != null) {
             this.pipe.original_y = this.pipe.y;
             this.board.activePipes.push(this.pipe);
